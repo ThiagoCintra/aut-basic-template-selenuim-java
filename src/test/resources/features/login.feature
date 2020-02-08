@@ -3,8 +3,8 @@
 Funcionalidade: Login
 
 	@teste
-	Cenário: Realizar login com sucesso
-		Dado que eu esteja na tela de login
-		Quando faço login com o usuário "" e senha ""
-		Então sou autenticado com sucesso
+	Cenário: Realizar pesquisa com sucesso
+		Dado que eu esteja na tela de pesquisa
+		Quando realizo pesquisa sobre msg
+		Então sou direcionado para pagina de resultados
 				

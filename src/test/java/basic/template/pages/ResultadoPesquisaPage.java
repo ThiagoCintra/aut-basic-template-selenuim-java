@@ -7,18 +7,17 @@ import org.openqa.selenium.support.PageFactory;
 
 import basic.template.utils.Helper;
 
-public class BasePage {
+public class ResultadoPesquisaPage {
 
-	public BasePage(WebDriver driver) {
+	public ResultadoPesquisaPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
-
-	@FindBy(name = "email")
-	private WebElement elemento;
-
-	public void sendMsgElemento(String txt) {
-		Helper.elemento_existe(elemento, 10);
-		elemento.sendKeys(txt);
+	
+	@FindBy(id = "resultStats")
+	private WebElement inputPesquisa;
+	
+	public Boolean validResult() {
+		return inputPesquisa.getText().contains("Aproximadamente");
+		
 	}
-
 }
