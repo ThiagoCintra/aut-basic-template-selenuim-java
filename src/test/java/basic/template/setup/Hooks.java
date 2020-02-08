@@ -17,10 +17,8 @@ public class Hooks {
 	@Before
 	public void startTest(Scenario scenario) {
 		
-		System.setProperty("webdriver.chrome.driver", "src/test/resources/mac/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "src/test/resources/mac/chromedriver.exe");
 		driver = new ChromeDriver();
-		
-		//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
 		driver.get(bundle.getString("env.url"));		
 	}
